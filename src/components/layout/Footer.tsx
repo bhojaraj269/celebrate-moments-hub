@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-bold text-gold mb-4">
-              Éclat Events
-            </h3>
+            <img src={logo} alt="Manu Media Events" className="h-14 w-auto mb-4" />
             <p className="text-cream/70 text-sm leading-relaxed mb-6">
               Creating unforgettable moments and transforming your dreams into 
               beautifully orchestrated celebrations.
@@ -87,7 +86,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                <span className="text-cream/70 text-sm">hello@eclatevents.com</span>
+                <span className="text-cream/70 text-sm">hello@manumediaevents.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold shrink-0 mt-0.5" />
@@ -103,7 +102,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-cream/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-cream/50 text-sm">
-            © {new Date().getFullYear()} Éclat Events. All rights reserved.
+            © {new Date().getFullYear()} Manu Media Events. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link to="#" className="text-cream/50 hover:text-gold text-sm transition-colors">

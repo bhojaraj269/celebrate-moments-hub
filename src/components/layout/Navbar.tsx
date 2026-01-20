@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const eventTypes = [
   { name: "Wedding Planning", href: "/events/wedding" },
@@ -26,14 +28,17 @@ const Navbar = () => {
   const isEventsActive = location.pathname.startsWith("/events");
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <motion.nav 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border"
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-serif font-bold text-gradient-gold">
-              Éclat Events
-            </span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={logo} alt="Manu Media Events" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -243,7 +248,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
