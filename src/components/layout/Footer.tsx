@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <img src={logo} alt="Manu Media Events" className="h-14 w-auto mb-4" />
+            <img src={logo} alt="Manu Media" className="h-14 w-auto mb-4" />
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Creating unforgettable moments and transforming your dreams into 
               beautifully orchestrated celebrations.
@@ -102,7 +102,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/50 text-sm">
-            © {new Date().getFullYear()} Manu Media Events. All rights reserved.
+            © {new Date().getFullYear()} Manu Media. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link to="#" className="text-white/50 hover:text-primary text-sm transition-colors">
