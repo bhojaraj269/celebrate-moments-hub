@@ -129,7 +129,7 @@ const Index = () => {
             <motion.span 
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
-              className="inline-block bg-gradient-to-r from-red-400 via-rose-300 to-red-500 bg-clip-text text-transparent font-medium tracking-widest uppercase text-sm mb-4 animate-pulse drop-shadow-[0_0_10px_rgba(239,68,68,0.5)]"
+              className="inline-block bg-gradient-to-r from-amber-700 via-amber-500 to-amber-700 bg-clip-text text-transparent font-medium tracking-widest uppercase text-sm mb-4 animate-pulse drop-shadow-[0_0_10px_rgba(180,83,9,0.5)]"
             >
               Premium Event Planning
             </motion.span>
