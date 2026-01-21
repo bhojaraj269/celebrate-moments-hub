@@ -206,7 +206,7 @@ const Index = () => {
               Where Dreams Meet <span className="text-gradient-gold">Perfection</span>
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-muted-foreground text-lg leading-relaxed">
-              At Manu Media Events, we believe every celebration deserves to be extraordinary. 
+              At Manu Media, we believe every celebration deserves to be extraordinary. 
               With over a decade of experience, our passionate team transforms your vision 
               into beautifully orchestrated events that leave lasting impressions. From 
               intimate gatherings to grand celebrations, we handle every detail with 

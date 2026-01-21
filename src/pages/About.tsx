@@ -81,7 +81,7 @@ const About = () => {
               variants={fadeInUp}
               className="text-muted-foreground text-lg leading-relaxed"
             >
-              For over a decade, Manu Media Events has been transforming ordinary occasions 
+              For over a decade, Manu Media has been transforming ordinary occasions 
               into extraordinary celebrations. Our passion for perfection and dedication 
               to creating unforgettable memories has made us a trusted name in event planning.
             </motion.p>
@@ -103,7 +103,7 @@ const About = () => {
                 variants={fadeInUp}
                 className="text-gold font-medium tracking-widest uppercase text-sm"
               >
-                About Manu Media Events
+                About Manu Media
               </motion.span>
               <motion.h2 
                 variants={fadeInUp}
@@ -116,7 +116,7 @@ const About = () => {
                 className="space-y-4 text-muted-foreground leading-relaxed"
               >
                 <motion.p variants={fadeInUp}>
-                  Founded in 2013, Manu Media Events began with a simple belief: every celebration 
+                  Founded in 2013, Manu Media began with a simple belief: every celebration 
                   deserves to be extraordinary. What started as a small team of passionate 
                   planners has grown into a full-service event management company, serving 
                   clients across the country.
