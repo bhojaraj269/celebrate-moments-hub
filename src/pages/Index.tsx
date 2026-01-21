@@ -140,7 +140,7 @@ const Index = () => {
             >
               Creating Memorable Moments
               <motion.span 
-                className="block text-purple-400"
+                className="block bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 bg-clip-text text-transparent animate-pulse drop-shadow-[0_0_10px_rgba(251,191,36,0.5)]"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
