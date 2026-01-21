@@ -167,7 +167,7 @@ const Index = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="heroOutline" size="xl" className="border-white text-white hover:bg-white hover:text-charcoal" asChild>
+              <Button variant="heroOutline" size="xl" className="bg-white border-white text-amber-500 hover:bg-amber-50 hover:text-amber-600" asChild>
                 <Link to="/gallery">View Our Work</Link>
               </Button>
             </motion.div>
