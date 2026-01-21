@@ -90,15 +90,15 @@ const Index = () => {
             alt="Elegant wedding setup"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 via-charcoal/30 to-charcoal/60" />
         </div>
 
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(15)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-gold/30 rounded-full"
+              className="absolute w-2 h-2 bg-white/20 rounded-full"
               initial={{ 
                 x: Math.random() * 100 + "%", 
                 y: "110%",
@@ -129,18 +129,18 @@ const Index = () => {
             <motion.span 
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
-              className="inline-block text-gold font-medium tracking-widest uppercase text-sm mb-4"
+              className="inline-block text-white/80 font-medium tracking-widest uppercase text-sm mb-4"
             >
               Premium Event Planning
             </motion.span>
             <motion.h1 
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-cream mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight"
             >
               Creating Memorable Moments
               <motion.span 
-                className="block text-gold"
+                className="block text-primary"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
@@ -151,7 +151,7 @@ const Index = () => {
             <motion.p 
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
-              className="text-lg md:text-xl text-cream/80 mb-10 max-w-2xl mx-auto"
+              className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto"
             >
               Transform your special occasions into extraordinary experiences with our 
               bespoke event planning services.
@@ -167,7 +167,7 @@ const Index = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="heroOutline" size="xl" className="border-cream text-cream hover:bg-cream hover:text-charcoal" asChild>
+              <Button variant="heroOutline" size="xl" className="border-white text-white hover:bg-white hover:text-charcoal" asChild>
                 <Link to="/gallery">View Our Work</Link>
               </Button>
             </motion.div>
@@ -184,9 +184,9 @@ const Index = () => {
           <motion.div 
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-8 h-12 rounded-full border-2 border-cream/50 flex items-start justify-center pt-2"
+            className="w-8 h-12 rounded-full border-2 border-white/50 flex items-start justify-center pt-2"
           >
-            <div className="w-1.5 h-3 bg-cream/70 rounded-full" />
+            <div className="w-1.5 h-3 bg-white/70 rounded-full" />
           </motion.div>
         </motion.div>
       </section>
@@ -290,7 +290,7 @@ const Index = () => {
       </section>
 
       {/* Gallery Preview */}
-      <section className="py-20 md:py-28 bg-charcoal overflow-hidden">
+      <section className="py-20 md:py-28 bg-foreground overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             initial="hidden"
@@ -299,9 +299,9 @@ const Index = () => {
             variants={staggerContainer}
             className="text-center mb-16"
           >
-            <motion.span variants={fadeInUp} className="text-gold font-medium tracking-widest uppercase text-sm">Our Portfolio</motion.span>
-            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-cream mt-4">
-              Moments We've <span className="text-gold">Created</span>
+            <motion.span variants={fadeInUp} className="text-primary font-medium tracking-widest uppercase text-sm">Our Portfolio</motion.span>
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mt-4">
+              Moments We've <span className="text-primary">Created</span>
             </motion.h2>
           </motion.div>
 
@@ -331,13 +331,13 @@ const Index = () => {
                   alt={item.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <motion.div 
                   initial={{ y: "100%" }}
                   whileHover={{ y: 0 }}
                   className="absolute bottom-0 left-0 right-0 p-6"
                 >
-                  <h3 className="text-xl font-serif font-semibold text-cream opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-xl font-serif font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {item.title}
                   </h3>
                 </motion.div>
@@ -360,7 +360,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 md:py-28 bg-blush overflow-hidden">
+      <section className="py-20 md:py-28 bg-secondary overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.div 
             initial="hidden"
@@ -369,9 +369,9 @@ const Index = () => {
             variants={staggerContainer}
             className="text-center mb-16"
           >
-            <motion.span variants={fadeInUp} className="text-gold font-medium tracking-widest uppercase text-sm">Testimonials</motion.span>
+            <motion.span variants={fadeInUp} className="text-primary font-medium tracking-widest uppercase text-sm">Testimonials</motion.span>
             <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mt-4">
-              What Our Clients <span className="text-gradient-gold">Say</span>
+              What Our Clients <span className="text-gradient-coral">Say</span>
             </motion.h2>
           </motion.div>
 
@@ -405,7 +405,7 @@ const Index = () => {
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 }}
                     >
-                      <Star className="h-5 w-5 fill-gold text-gold" />
+                      <Star className="h-5 w-5 fill-primary text-primary" />
                     </motion.div>
                   ))}
                 </motion.div>
@@ -416,7 +416,7 @@ const Index = () => {
                   <p className="font-serif font-semibold text-foreground">
                     {testimonial.name}
                   </p>
-                  <p className="text-sm text-gold">{testimonial.event}</p>
+                  <p className="text-sm text-primary">{testimonial.event}</p>
                 </div>
               </motion.div>
             ))}
@@ -425,7 +425,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-r from-gold-dark via-gold to-gold-dark relative overflow-hidden">
+      <section className="py-20 md:py-28 bg-gradient-to-r from-primary via-coral to-primary relative overflow-hidden">
         {/* Animated background */}
         <motion.div
           animate={{ 
@@ -452,13 +452,13 @@ const Index = () => {
           >
             <motion.h2 
               variants={fadeInUp}
-              className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-charcoal mb-6"
+              className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6"
             >
               Ready to Create Magic?
             </motion.h2>
             <motion.p 
               variants={fadeInUp}
-              className="text-charcoal/80 text-lg mb-10 max-w-2xl mx-auto"
+              className="text-white/80 text-lg mb-10 max-w-2xl mx-auto"
             >
               Let's turn your vision into an unforgettable celebration. 
               Contact us today to start planning your perfect event.
@@ -466,7 +466,7 @@ const Index = () => {
             <motion.div variants={fadeInUp}>
               <Button
                 size="xl"
-                className="bg-charcoal text-cream hover:bg-charcoal/90"
+                className="bg-white text-primary hover:bg-white/90"
                 asChild
               >
                 <Link to="/contact">
