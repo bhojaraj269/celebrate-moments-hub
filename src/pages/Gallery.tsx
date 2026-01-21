@@ -1,14 +1,6 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import heroWedding from "@/assets/hero-wedding.jpg";
-import galleryBirthday from "@/assets/gallery-birthday.jpg";
-import galleryBabyShower from "@/assets/gallery-baby-shower.jpg";
-import galleryProposal from "@/assets/gallery-proposal.jpg";
-import galleryDestination from "@/assets/gallery-destination-wedding.jpg";
-import galleryHousewarming from "@/assets/gallery-housewarming.jpg";
-import galleryAnniversary from "@/assets/gallery-anniversary.jpg";
-import galleryGenderReveal from "@/assets/gallery-gender-reveal.jpg";
 
 const categories = [
   "All",
@@ -20,15 +12,15 @@ const categories = [
   "Anniversaries",
 ];
 
-const galleryImages = [
-  { src: heroWedding, category: "Weddings", title: "Grand Ballroom Wedding" },
-  { src: galleryBirthday, category: "Birthdays", title: "Elegant Birthday Celebration" },
-  { src: galleryBabyShower, category: "Baby Showers", title: "Sweet Baby Shower" },
-  { src: galleryProposal, category: "Proposals", title: "Romantic Rooftop Proposal" },
-  { src: galleryDestination, category: "Weddings", title: "Beach Destination Wedding" },
-  { src: galleryHousewarming, category: "House Warming", title: "Modern Housewarming Party" },
-  { src: galleryAnniversary, category: "Anniversaries", title: "Golden Anniversary Dinner" },
-  { src: galleryGenderReveal, category: "Baby Showers", title: "Gender Reveal Celebration" },
+const galleryItems = [
+  { category: "Weddings", title: "Grand Ballroom Wedding" },
+  { category: "Birthdays", title: "Elegant Birthday Celebration" },
+  { category: "Baby Showers", title: "Sweet Baby Shower" },
+  { category: "Proposals", title: "Romantic Rooftop Proposal" },
+  { category: "Weddings", title: "Beach Destination Wedding" },
+  { category: "House Warming", title: "Modern Housewarming Party" },
+  { category: "Anniversaries", title: "Golden Anniversary Dinner" },
+  { category: "Baby Showers", title: "Gender Reveal Celebration" },
 ];
 
 const fadeInUp = {
@@ -49,9 +41,9 @@ const staggerContainer = {
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredImages = activeCategory === "All"
-    ? galleryImages
-    : galleryImages.filter((img) => img.category === activeCategory);
+  const filteredItems = activeCategory === "All"
+    ? galleryItems
+    : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
     <div className="bg-background overflow-hidden">
@@ -126,16 +118,16 @@ const Gallery = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <AnimatePresence mode="popLayout">
-              {filteredImages.map((image, index) => (
+              {filteredItems.map((item, index) => (
                 <motion.div
-                  key={image.title}
+                  key={item.title}
                   layout
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   className={cn(
-                    "group relative overflow-hidden rounded-2xl cursor-pointer",
+                    "group relative overflow-hidden rounded-2xl cursor-pointer bg-muted",
                     index === 0 && "md:col-span-2 md:row-span-2"
                   )}
                 >
@@ -143,30 +135,18 @@ const Gallery = () => {
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                     className={cn(
-                      "aspect-square",
-                      index === 0 && "md:aspect-auto md:h-full"
+                      "aspect-square flex items-center justify-center",
+                      index === 0 && "md:aspect-auto md:h-full md:min-h-[400px]"
                     )}
                   >
-                    <motion.img
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
-                      src={image.src}
-                      alt={image.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <motion.div 
-                    initial={{ y: "100%" }}
-                    whileHover={{ y: 0 }}
-                    className="absolute bottom-0 left-0 right-0 p-6"
-                  >
-                    <span className="text-gold text-sm font-medium uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {image.category}
-                    </span>
-                    <h3 className="text-xl font-serif font-semibold text-cream mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
-                      {image.title}
-                    </h3>
+                    <div className="text-center p-6">
+                      <span className="text-gold text-sm font-medium uppercase tracking-wider">
+                        {item.category}
+                      </span>
+                      <h3 className="text-xl font-serif font-semibold text-foreground mt-2">
+                        {item.title}
+                      </h3>
+                    </div>
                   </motion.div>
                 </motion.div>
               ))}
