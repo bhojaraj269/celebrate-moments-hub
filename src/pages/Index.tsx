@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Star, Heart, Calendar, Users, Sparkles, ArrowRight } from "lucide-react";
+import { Star, Heart, Calendar, Users, Sparkles, ArrowRight, ImageIcon } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-wedding.jpg";
-import galleryBirthday from "@/assets/gallery-birthday.jpg";
-import galleryBabyShower from "@/assets/gallery-baby-shower.jpg";
-import galleryProposal from "@/assets/gallery-proposal.jpg";
 
 const services = [
   {
@@ -80,16 +76,14 @@ const Index = () => {
     <div className="bg-background overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <motion.img
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            src={heroImage}
-            alt="Elegant wedding setup"
-            className="w-full h-full object-cover"
-          />
+        {/* Background Placeholder */}
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal/90 to-charcoal/80">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white/20">
+              <ImageIcon className="w-24 h-24 mx-auto mb-4" />
+              <p className="text-sm uppercase tracking-widest">Hero Image Placeholder</p>
+            </div>
+          </div>
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 via-charcoal/30 to-charcoal/60" />
         </div>
 
@@ -313,34 +307,27 @@ const Index = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {[
-              { image: galleryBirthday, title: "Birthday Celebrations" },
-              { image: galleryBabyShower, title: "Baby Showers" },
-              { image: galleryProposal, title: "Romantic Proposals" },
-            ].map((item, index) => (
+              { title: "Birthday Celebrations" },
+              { title: "Baby Showers" },
+              { title: "Romantic Proposals" },
+            ].map((item) => (
               <motion.div
                 key={item.title}
                 variants={scaleIn}
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.02 }}
-                className="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer bg-muted/20 border border-white/10"
               >
-                <motion.img
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white/30">
+                  <ImageIcon className="w-16 h-16 mb-3" />
+                  <p className="text-xs uppercase tracking-widest">Image Placeholder</p>
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <motion.div 
-                  initial={{ y: "100%" }}
-                  whileHover={{ y: 0 }}
-                  className="absolute bottom-0 left-0 right-0 p-6"
-                >
+                <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-xl font-serif font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {item.title}
                   </h3>
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
