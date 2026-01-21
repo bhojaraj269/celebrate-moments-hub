@@ -140,7 +140,7 @@ const Index = () => {
             >
               Creating Memorable Moments
               <motion.span 
-                className="block text-primary"
+                className="block text-purple-400"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
