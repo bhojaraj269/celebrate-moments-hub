@@ -4,32 +4,32 @@ import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-charcoal text-cream">
+    <footer className="bg-foreground text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
             <img src={logo} alt="Manu Media Events" className="h-14 w-auto mb-4" />
-            <p className="text-cream/70 text-sm leading-relaxed mb-6">
+            <p className="text-white/70 text-sm leading-relaxed mb-6">
               Creating unforgettable moments and transforming your dreams into 
               beautifully orchestrated celebrations.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-charcoal transition-colors"
+                className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-charcoal transition-colors"
+                className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-charcoal transition-colors"
+                className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
               >
                 <Twitter className="h-5 w-5" />
               </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-cream/70 hover:text-gold transition-colors text-sm"
+                    className="text-white/70 hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -70,7 +70,7 @@ const Footer = () => {
                 "Engagement Parties",
               ].map((service) => (
                 <li key={service}>
-                  <span className="text-cream/70 text-sm">{service}</span>
+                  <span className="text-white/70 text-sm">{service}</span>
                 </li>
               ))}
             </ul>
@@ -81,16 +81,16 @@ const Footer = () => {
             <h4 className="text-lg font-serif font-semibold mb-6">Get in Touch</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                <span className="text-cream/70 text-sm">+1 (555) 123-4567</span>
+                <Phone className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <span className="text-white/70 text-sm">+1 (555) 123-4567</span>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                <span className="text-cream/70 text-sm">hello@manumediaevents.com</span>
+                <Mail className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <span className="text-white/70 text-sm">hello@manumediaevents.com</span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-                <span className="text-cream/70 text-sm">
+                <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <span className="text-white/70 text-sm">
                   123 Celebration Avenue,<br />
                   New York, NY 10001
                 </span>
@@ -100,15 +100,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-cream/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-cream/50 text-sm">
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-white/50 text-sm">
             © {new Date().getFullYear()} Manu Media Events. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link to="#" className="text-cream/50 hover:text-gold text-sm transition-colors">
+            <Link to="#" className="text-white/50 hover:text-primary text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link to="#" className="text-cream/50 hover:text-gold text-sm transition-colors">
+            <Link to="#" className="text-white/50 hover:text-primary text-sm transition-colors">
               Terms of Service
             </Link>
           </div>
